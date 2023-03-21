@@ -41,7 +41,7 @@ git clone https://github.com/Chindada/macos_dev_setup.git ~/dev_projects/macos_d
 
 ```bash
 cd ~/dev_projects/macos_dev_setup
-./install.sh
+./install.sh 2>&1 | tee output_$(date +%Y%m%d%H%M).txt
 ```
 
 ---
