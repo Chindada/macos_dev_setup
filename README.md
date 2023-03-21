@@ -3,7 +3,7 @@
 [![OS](https://img.shields.io/badge/OS-macOS-orange?logo=macos&logoColor=orange)](https://www.apple.com/tw/macos)
 ![Ventura](./assets/s004.png)
 
-## Install for command cli tools in macOS
+## Install for command CLI tools in macOS
 
 ```bash
 sudo xcode-select --install
@@ -28,12 +28,11 @@ sudo softwareupdate --install-rosetta --agree-to-license
 
 ---
 
-## Clone project using https by username and password
+## Clone project using HTTPS
 
 ```bash
 mkdir -p ~/dev_projects
-cd ~/dev_projects
-git clone https://github.com/Chindada/macos_dev_setup.git
+git clone https://github.com/Chindada/macos_dev_setup.git ~/dev_projects/macos_dev_setup
 ```
 
 ---
@@ -47,7 +46,7 @@ cd ~/dev_projects/macos_dev_setup
 
 ---
 
-## Post-Steps
+## Post install
 
 - Generate SSH key or import SSH key
 - If new, add SSH key to github
@@ -55,6 +54,7 @@ cd ~/dev_projects/macos_dev_setup
 ```bash
 ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519 -q -N "" -C "maochindada@gmail.com"
 eval "$(ssh-agent -s)"
+
 echo 'Host *
   AddKeysToAgent yes
   UseKeychain yes
@@ -70,8 +70,7 @@ cat ~/.ssh/id_ed25519.pub
 
 ```bash
 rm -rf ~/dev_projects/macos_dev_setup
-cd ~/dev_projects
-git clone git@github.com:Chindada/macos_dev_setup.git
+git clone git@github.com:Chindada/macos_dev_setup.git ~/dev_projects/macos_dev_setup
 ```
 
 - Flutter doctor and ulimit
@@ -106,7 +105,7 @@ brew install tmux
 brew install gcc
 ```
 
-## Check
+## Final check
 
 ```bash
 git config --list
@@ -115,6 +114,6 @@ flutter --version
 node --version
 ```
 
-## Authors
+## Author
 
 - [**Tim Hsu**](https://github.com/Chindada)
