@@ -1,7 +1,7 @@
 # **macOS Developer Setup**
 
 [![OS](https://img.shields.io/badge/OS-macOS-orange?logo=macos&logoColor=orange)](https://www.apple.com/tw/macos)
-![Ventura](./assets/s028.png)
+![Ventura](./assets/s004.png)
 
 ## Install for command cli tools in macOS
 
