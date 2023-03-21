@@ -28,8 +28,3 @@ brew install clang-format
 brew install mosquitto
 brew install postgresql
 brew install tree
-
-# brew install pre-commit
-# brew install cmake
-# brew install tmux
-# brew install gcc

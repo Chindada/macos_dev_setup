@@ -26,15 +26,3 @@ gsed -i '$ a source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highl
 brew install git
 git config --global user.name "TimHsu@M2MAX-$(date '+%Y%m%d')"
 git config --global user.email "maochindada@gmail.com"
-
-# brew install gnupg
-# brew install pinentry-mac
-# echo "pinentry-program /opt/homebrew/bin/pinentry-mac" >~/.gnupg/gpg-agent.conf
-
-# gpg --full-generate-key
-# gpg --list-secret-keys --keyid-format=long
-# gpg --armor --export <keyid>
-
-# git config --global gpg.program gpg
-# git config --global commit.gpgsign true
-# git config --global tag.gpgSign true

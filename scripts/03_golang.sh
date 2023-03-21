@@ -15,7 +15,6 @@ version=1.19.5
 version=1.19.6
 version=1.20
 version=1.20.1
-
 version=1.20.2
 curl -fSL https://go.dev/dl/go$version.darwin-arm64.pkg --output golang.pkg
 sudo installer -pkg ./golang.pkg -target /
@@ -34,7 +33,6 @@ version=21.9
 version=21.11
 version=21.12
 version=22.0
-
 version=22.2
 curl -fSL https://github.com/protocolbuffers/protobuf/releases/download/v$version/protoc-$version-osx-aarch_64.zip --output protoc.zip
 rm -rf ~/sdk_tools/protoc

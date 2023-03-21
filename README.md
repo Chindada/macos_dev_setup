@@ -66,16 +66,44 @@ pbcopy <~/.ssh/id_ed25519.pub
 cat ~/.ssh/id_ed25519.pub
 ```
 
+- Clone project using SSH
+
 ```bash
 rm -rf ~/dev_projects/macos_dev_setup
 cd ~/dev_projects
 git clone git@github.com:Chindada/macos_dev_setup.git
-
 ```
+
+- Flutter doctor and ulimit
 
 ```bash
 flutter doctor --android-licenses
 echo "ulimit -n 1024">>~/.zshrc
+```
+
+- Generate GPG key
+
+```bash
+brew install gnupg
+brew install pinentry-mac
+echo "pinentry-program /opt/homebrew/bin/pinentry-mac" >~/.gnupg/gpg-agent.conf
+
+gpg --full-generate-key
+gpg --list-secret-keys --keyid-format=long
+gpg --armor --export <keyid>
+
+git config --global gpg.program gpg
+git config --global commit.gpgsign true
+git config --global tag.gpgSign true
+```
+
+- Optional brew formula
+
+```bash
+brew install pre-commit
+brew install cmake
+brew install tmux
+brew install gcc
 ```
 
 ## Check
