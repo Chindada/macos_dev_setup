@@ -1,5 +1,6 @@
 #!/bin/zsh
 
+echo "Installing node..."
 version=v16.13.2
 version=v16.15.1
 version=v18.12.1

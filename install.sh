@@ -1,5 +1,7 @@
 #!/bin/zsh
 
+set -e
+
 . ./scripts/01_ohmyzsh.sh
 . ./scripts/02_homebrew.sh
 . ./scripts/03_golang.sh

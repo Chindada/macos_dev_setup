@@ -1,7 +1,9 @@
 #!/bin/zsh
 
+echo "Installing mas..."
 brew install mas
 
+echo "Installing mas apps..."
 # Xcode
 mas install 497799835 &
 

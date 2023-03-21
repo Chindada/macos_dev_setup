@@ -48,6 +48,13 @@ cd ~/dev_projects/macos_dev_setup
 
 ## Post install
 
+- Launch iterm2
+- It will prompt to initial powerlevel10k
+
+```bash
+yyyy3121111121y1yy
+```
+
 - Generate SSH key or import SSH key
 - If new, add SSH key to github
 
