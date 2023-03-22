@@ -126,19 +126,28 @@ cat ~/.ssh/id_ed25519.pub
 >> If you don't have Apple's standard version of ssh-add installed, you may receive an error. For more information, see "Error: ssh-add: illegal option -- K."
 
 - Generate GPG key
+- Add export to github
 
 ```bash
-brew install gnupg
-brew install pinentry-mac
-echo "pinentry-program /opt/homebrew/bin/pinentry-mac" >~/.gnupg/gpg-agent.conf
-
 gpg --full-generate-key
-gpg --list-secret-keys --keyid-format=long
-gpg --armor --export <keyid>
 
+KEY_ID=$(gpg --list-secret-keys --with-colons | awk -F: '$1 == "sec" {print $5}')
+gpg --armor --export $KEY_ID
+```
+
+- Set git config
+
+```bash
+git config --global user.signingkey $KEY_ID
 git config --global gpg.program gpg
 git config --global commit.gpgsign true
 git config --global tag.gpgSign true
+```
+
+- Test GPG sign
+
+```bash
+echo "test" | gpg --clearsign
 ```
 
 - Optional brew formula

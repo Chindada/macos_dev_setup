@@ -57,3 +57,16 @@ else
   echo "$new_rc does not exist, adding it to ~/.zshrc"
   gsed -i "$ a $new_rc" ~/.zshrc
 fi
+
+brew install gnupg
+brew install pinentry-mac
+
+gpg --version
+echo "pinentry-program $(brew --prefix)/bin/pinentry-mac" >~/.gnupg/gpg-agent.conf
+new_rc='export GPG_TTY=$(tty)'
+if grep -q $new_rc ~/.zshrc; then
+  echo "$new_rc already exists"
+else
+  echo "$new_rc does not exist, adding it to ~/.zshrc"
+  gsed -i "$ a $new_rc" ~/.zshrc
+fi
