@@ -32,10 +32,13 @@
     `-- 10_mas_apps.sh        # Install mas apps
 ```
 
-## **Step 1: Install CLI tools in macOS**
+## **Step 1: Install Xcode CLI tools in macOS**
 
 ```bash
 sudo xcode-select --install
+```
+
+```bash
 sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
 ```
 
