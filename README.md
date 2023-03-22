@@ -36,13 +36,14 @@ sudo softwareupdate --install-rosetta --agree-to-license
 
 ```bash
 # change to your own folder
-ROOT_DIR=~/dev_projects
+ROOT_DIR=~/dd
+VERSION=1.0.0
 
 mkdir -p $ROOT_DIR
-curl -fSL https://github.com/Chindada/macos_dev_setup/archive/refs/heads/main.zip -o macos_dev_setup.zip
+curl -fSL https://github.com/Chindada/macos_dev_setup/archive/refs/tags/v$VERSION.zip -o macos_dev_setup.zip
 unzip -q macos_dev_setup.zip -d $ROOT_DIR
 rm macos_dev_setup.zip
-mv $ROOT_DIR/macos_dev_setup-main $ROOT_DIR/macos_dev_setup
+mv $ROOT_DIR/macos_dev_setup-$VERSION $ROOT_DIR/macos_dev_setup
 cd $ROOT_DIR/macos_dev_setup
 ```
 
