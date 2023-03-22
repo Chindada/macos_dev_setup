@@ -63,7 +63,7 @@ sudo softwareupdate --install-rosetta --agree-to-license
 
 ```bash
 # change to your own folder
-ROOT_DIR=~/dd
+ROOT_DIR=~/dev_projects
 VERSION=1.0.0
 
 mkdir -p $ROOT_DIR
