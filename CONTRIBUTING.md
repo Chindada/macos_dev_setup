@@ -48,6 +48,13 @@ VERSION=1.0.0
 git tag -a v$VERSION $COMMIT_HASH -m $VERSION
 ```
 
+- Push tag
+
+```sh
+git push -u origin --all
+git push -u origin --tags
+```
+
 ```sh
 git-chglog -o CHANGELOG.md
 ```
