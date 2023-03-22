@@ -62,7 +62,6 @@ sudo softwareupdate --install-rosetta --agree-to-license
 - My root folder is `~/dev_projects`, you can change it to your own folder
 
 ```bash
-# change to your own folder
 ROOT_DIR=~/dev_projects
 VERSION=1.0.0
 
