@@ -1,5 +1,19 @@
 # CHANGELOG
 
+## [v1.1.0](https://github.com/Chindada/macos_dev_setup/compare/v1.0.0...v1.1.0)
+
+> 2023-03-22
+
+### Bug Fixes (1)
+
+* **readme:** fix wrong dest folder name
+
+### Features (3)
+
+* **gpg:** improve sequence of generate gpg key
+* **gpg:** move gpg from readme to homebrew part
+* **readme:** add projcect structure to readme
+
 ## [v1.0.0](https://github.com/Chindada/macos_dev_setup/compare/v0.0.1...v1.0.0)
 
 > 2023-03-22

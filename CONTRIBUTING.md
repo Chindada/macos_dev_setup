@@ -43,9 +43,13 @@ pre-commit run --all-files
 - new tag
 
 ```sh
-COMMIT_HASH=01170ba
-VERSION=1.0.0
+COMMIT_HASH=b0751d5
+VERSION=1.1.0
 git tag -a v$VERSION $COMMIT_HASH -m $VERSION
+```
+
+```sh
+git-chglog -o CHANGELOG.md
 ```
 
 - Push tag
@@ -53,10 +57,6 @@ git tag -a v$VERSION $COMMIT_HASH -m $VERSION
 ```sh
 git push -u origin --all
 git push -u origin --tags
-```
-
-```sh
-git-chglog -o CHANGELOG.md
 ```
 
 ### Find ignored files
