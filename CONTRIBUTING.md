@@ -43,8 +43,8 @@ pre-commit run --all-files
 - new tag
 
 ```sh
-COMMIT_HASH=b0751d5
-VERSION=1.1.0
+COMMIT_HASH=1c9feea
+VERSION=1.1.1
 git tag -a v$VERSION $COMMIT_HASH -m $VERSION
 ```
 

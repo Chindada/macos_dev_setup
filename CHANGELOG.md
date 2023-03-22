@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## [v1.1.1](https://github.com/Chindada/macos_dev_setup/compare/v1.1.0...v1.1.1)
+
+> 2023-03-22
+
+### Features (1)
+
+* **xcode:** move xcode license from script to post install
+
 ## [v1.1.0](https://github.com/Chindada/macos_dev_setup/compare/v1.0.0...v1.1.0)
 
 > 2023-03-22
