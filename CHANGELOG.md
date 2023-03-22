@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## [v1.3.0](https://github.com/Chindada/macos_dev_setup/compare/v1.2.0...v1.3.0)
+
+> 2023-03-23
+
+### Bug Fixes (1)
+
+* **install:** fix first run of m2 max install error
+
 ## [v1.2.0](https://github.com/Chindada/macos_dev_setup/compare/v1.1.2...v1.2.0)
 
 > 2023-03-22
