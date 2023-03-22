@@ -6,6 +6,32 @@
 
 ![13.2.1](./assets/s004.png)
 
+## Project Structure
+
+```bash
+|-- README.md          # The file you are reading now
+|-- assets             # Images
+|-- fonts              # Fonts
+|   |-- Hack           # Hack font
+|   |-- JetBrainsMono     # JetBrainsMono font
+|   |-- MesloLGS          # MesloLGS font
+|   |-- Monoid            # Monoid font
+|   |-- OperatorMono      # OperatorMono font
+|   `-- SourceCodePro     # SourceCodePro font
+|-- install.sh         # Main script
+`-- scripts
+    |-- 01_ohmyzsh.sh         # Install ohmyzsh
+    |-- 02_homebrew.sh        # Install homebrew
+    |-- 03_golang.sh          # Install golang
+    |-- 04_flutter.sh         # Install flutter
+    |-- 05_node.sh            # Install node
+    |-- 06_python.sh          # Install python
+    |-- 07_homebrew_utils.sh  # Install homebrew utils
+    |-- 08_powerlevel10k.sh   # Install powerlevel10k
+    |-- 09_fonts.sh           # Install fonts
+    `-- 10_mas_apps.sh        # Install mas apps
+```
+
 ## **Step 1: Install CLI tools in macOS**
 
 ```bash
