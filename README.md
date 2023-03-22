@@ -95,7 +95,7 @@ rm -rf $ROOT_DIR/macos_dev_setup
 - Paste `yyyy3121111121y1yy` to terminal
 - The iterm2 will be like below
 
-![Ventura](./assets/s005.png)
+![ITERM2](./assets/s005.png)
 
 - Flutter doctor
 
@@ -125,20 +125,20 @@ cat ~/.ssh/id_ed25519.pub
 >> The --apple-use-keychain option is in Apple's standard version of ssh-add. In MacOS versions prior to Monterey (12.0), the --apple-use-keychain and --apple-load-keychain flags used the syntax -K and -A, respectively.
 >> If you don't have Apple's standard version of ssh-add installed, you may receive an error. For more information, see "Error: ssh-add: illegal option -- K."
 
-- Generate GPG key
-- Add export to github
+- Generate GPG key, then add export to github
+- There should not be any key in the list
 
 ```bash
 gpg --full-generate-key
-
-KEY_ID=$(gpg --list-secret-keys --with-colons | awk -F: '$1 == "sec" {print $5}')
-gpg --armor --export $KEY_ID
 ```
 
-- Set git config
+![GPG](./assets/s006.png)
 
 ```bash
-git config --global user.signingkey $KEY_ID
+SEC_KEY_ID=$(gpg --list-secret-keys --with-colons | awk -F: '$1 == "sec" {print $5}')
+gpg --armor --export $SEC_KEY_ID
+
+git config --global user.signingkey $SEC_KEY_ID
 git config --global gpg.program gpg
 git config --global commit.gpgsign true
 git config --global tag.gpgSign true
