@@ -1,7 +1,8 @@
 # MACOS DEVELOPER SETUP
 
-[![Maintained](https://img.shields.io/badge/Maintained-yes-green?style=for-the-badge&logo=appveyor)](https://github.com/Chindada/macos_dev_setup)
+[![MAINTAINED](https://img.shields.io/badge/Maintained-yes-green?style=for-the-badge&logo=appveyor)](https://github.com/Chindada/macos_dev_setup)
 [![OS](https://img.shields.io/badge/macOS-13.2.1-orange?style=for-the-badge&logo=macOS&logoColor=violet)](https://www.apple.com/tw/macos)
+[![ARCH](https://img.shields.io/badge/Arch-arm64-silver?style=for-the-badge&logo=arm&logoColor=blue)](https://www.apple.com/tw/macos)
 
 ![13.2.1](./assets/s004.png)
 
