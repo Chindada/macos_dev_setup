@@ -97,6 +97,13 @@ rm -rf $ROOT_DIR/macos_dev_setup
 
 ![ITERM2](./assets/s005.png)
 
+- Xcode license and run first launch
+
+```bash
+sudo xcodebuild -license
+sudo xcodebuild -runFirstLaunch
+```
+
 - Flutter doctor
 
 ```bash

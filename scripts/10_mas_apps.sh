@@ -32,6 +32,3 @@ mas install 1243219105 &
 # VMware Remote Console
 mas install 1230249825 &
 wait
-
-sudo xcodebuild -license
-sudo xcodebuild -runFirstLaunch
