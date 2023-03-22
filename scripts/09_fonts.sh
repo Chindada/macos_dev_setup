@@ -1,17 +1,57 @@
 #!/bin/zsh
 
+setopt nullglob
 echo "Installing fonts..."
-sudo rm -rf /Library/Fonts/Source_Code_Pro
-cp ./fonts/Source_Code_Pro/*.ttf /Library/Fonts/
+fonts=Hack
+files=(/Library/Fonts/$fonts*.ttf)
+if ((${#files[@]})); then
+    echo "Removing old $fonts..."
+    rm -rf /Library/Fonts/$fonts*.ttf
+fi
+echo "Installing $fonts..."
+cp ./fonts/Hack/$fonts*.ttf /Library/Fonts/
 
-sudo rm -rf /Library/Fonts/Jetbrain_Mono
-cp ./fonts/Jetbrain_Mono/*.ttf /Library/Fonts/
+fonts=JetBrainsMono
+files=(/Library/Fonts/$fonts*.ttf)
+if ((${#files[@]})); then
+    echo "Removing old $fonts..."
+    rm -rf /Library/Fonts/$fonts*.ttf
+fi
+echo "Installing $fonts..."
+cp ./fonts/JetBrainsMono/$fonts*.ttf /Library/Fonts/
 
-sudo rm -rf /Library/Fonts/Hack
-cp ./fonts/Hack/*.ttf /Library/Fonts/
+fonts=MesloLGS
+files=(/Library/Fonts/$fonts*.ttf)
+if ((${#files[@]})); then
+    echo "Removing old $fonts..."
+    rm -rf /Library/Fonts/$fonts*.ttf
+fi
+echo "Installing $fonts..."
+cp ./fonts/MesloLGS/$fonts*.ttf /Library/Fonts/
 
-sudo rm -rf /Library/Fonts/Monoid
-cp ./fonts/Monoid/*.ttf /Library/Fonts/
+fonts=Monoid
+files=(/Library/Fonts/$fonts*.ttf)
+if ((${#files[@]})); then
+    echo "Removing old $fonts..."
+    rm -rf /Library/Fonts/$fonts*.ttf
+fi
+echo "Installing $fonts..."
+cp ./fonts/Monoid/$fonts*.ttf /Library/Fonts/
 
-sudo rm -rf /Library/Fonts/Operator_Mono
-cp ./fonts/Operator_Mono/*.otf /Library/Fonts/
+fonts=OperatorMono
+files=(/Library/Fonts/$fonts*.otf)
+if ((${#files[@]})); then
+    echo "Removing old $fonts..."
+    rm -rf /Library/Fonts/$fonts*.otf
+fi
+echo "Installing $fonts..."
+cp ./fonts/OperatorMono/$fonts*.otf /Library/Fonts/
+
+fonts=SourceCodePro
+files=(/Library/Fonts/$fonts*.ttf)
+if ((${#files[@]})); then
+    echo "Removing old $fonts..."
+    rm -rf /Library/Fonts/$fonts*.ttf
+fi
+echo "Installing $fonts..."
+cp ./fonts/SourceCodePro/$fonts*.ttf /Library/Fonts/
