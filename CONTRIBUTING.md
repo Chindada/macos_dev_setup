@@ -43,8 +43,9 @@ pre-commit run --all-files
 - new tag
 
 ```sh
-COMMIT_HASH=XXXX
-git tag -a v1.1.0 $COMMIT_HASH -m "message"
+COMMIT_HASH=01170ba
+VERSION=1.0.0
+git tag -a v$VERSION $COMMIT_HASH -m $VERSION
 ```
 
 ```sh
