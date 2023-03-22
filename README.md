@@ -1,9 +1,11 @@
-# **macOS Developer Setup**
+# MACOS DEVELOPER SETUP
 
-[![OS](https://img.shields.io/badge/OS-macOS-orange?logo=macos&logoColor=orange)](https://www.apple.com/tw/macos)
-![Ventura](./assets/s004.png)
+[![Maintained](https://img.shields.io/badge/Maintained-yes-green?style=for-the-badge&logo=appveyor)](https://github.com/Chindada/macos_dev_setup)
+[![OS](https://img.shields.io/badge/macOS-13.2.1-orange?style=for-the-badge&logo=macOS&logoColor=violet)](https://www.apple.com/tw/macos)
 
-## Install for command CLI tools in macOS
+![13.2.1](./assets/s004.png)
+
+## **Step 1: Install CLI tools in macOS**
 
 ```bash
 sudo xcode-select --install
@@ -12,7 +14,7 @@ sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
 
 ---
 
-## Install rosetta2 from command line
+## **Step 2: Install Rosetta2 from command line**
 
 ```bash
 sudo softwareupdate --install-rosetta --agree-to-license
@@ -20,39 +22,57 @@ sudo softwareupdate --install-rosetta --agree-to-license
 
 ---
 
-## (Optional) CalDigit Thunderbolt Station Driver(TS3 Plus)
+## **Step 3: (Optional) CalDigit Thunderbolt Station Driver(TS3 Plus)**
 
-- Reduce secruity policy in recovery os
-- [Downdload Link](https://downloads.caldigit.com/CalDigit-Thunderbolt-Station-Mac-Drivers.zip)
-- Manual install driver
+- Reduce secruity policy in recovery os [Reference](https://support.apple.com/guide/deployment/startup-security-dep5810e849c/web)
+- [Downdload](https://downloads.caldigit.com/CalDigit-Thunderbolt-Station-Mac-Drivers.zip) and manual install driver
 
 ---
 
-## Clone project using HTTPS
+## **Step 4: Download and Install**
+
+- Directly download and unzip
+- My root folder is `~/dev_projects`, you can change it to your own folder
 
 ```bash
-mkdir -p ~/dev_projects
-git clone https://github.com/Chindada/macos_dev_setup.git ~/dev_projects/macos_dev_setup
+# change to your own folder
+ROOT_DIR=~/dev_projects
+
+mkdir -p $ROOT_DIR
+curl -fSL https://github.com/Chindada/macos_dev_setup/archive/refs/heads/main.zip -o macos_dev_setup.zip
+unzip -q macos_dev_setup.zip -d $ROOT_DIR
+rm macos_dev_setup.zip
+mv $ROOT_DIR/macos_dev_setup-main $ROOT_DIR/macos_dev_setup
+cd $ROOT_DIR/macos_dev_setup
 ```
 
----
-
-## Install
+- Install and the output will be saved to `output_$(date +%Y%m%d%H%M).txt`
 
 ```bash
-cd ~/dev_projects/macos_dev_setup
 ./install.sh 2>&1 | tee output_$(date +%Y%m%d%H%M).txt
 ```
 
+- if there is no error in the output, you can remove the folder
+
+```bash
+rm -rf $ROOT_DIR/macos_dev_setup
+```
+
 ---
 
-## Post install
+## **Step 5: Post install**
 
 - Launch iterm2
 - It will prompt to initial powerlevel10k
+- Paste `yyyy3121111121y1yy` to terminal
+- The iterm2 will be like below
+
+![Ventura](./assets/s005.png)
+
+- Flutter doctor
 
 ```bash
-yyyy3121111121y1yy
+flutter doctor --android-licenses
 ```
 
 - Generate SSH key or import SSH key
@@ -62,30 +82,20 @@ yyyy3121111121y1yy
 ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519 -q -N "" -C "maochindada@gmail.com"
 eval "$(ssh-agent -s)"
 
+touch ~/.ssh/config
 echo 'Host *
   AddKeysToAgent yes
   UseKeychain yes
   IdentityFile ~/.ssh/id_ed25519
   StrictHostKeyChecking no' >~/.ssh/config
 
-ssh-add -K ~/.ssh/id_ed25519
-pbcopy <~/.ssh/id_ed25519.pub
+ssh-add --apple-use-keychain ~/.ssh/id_ed25519
 cat ~/.ssh/id_ed25519.pub
 ```
 
-- Clone project using SSH
-
-```bash
-rm -rf ~/dev_projects/macos_dev_setup
-git clone git@github.com:Chindada/macos_dev_setup.git ~/dev_projects/macos_dev_setup
-```
-
-- Flutter doctor and ulimit
-
-```bash
-flutter doctor --android-licenses
-echo "ulimit -n 1024">>~/.zshrc
-```
+> Note: The --apple-use-keychain option stores the passphrase in your keychain for you when you add an SSH key to the ssh-agent. If you chose not to add a passphrase to your key, run the command without the --apple-use-keychain option.
+>> The --apple-use-keychain option is in Apple's standard version of ssh-add. In MacOS versions prior to Monterey (12.0), the --apple-use-keychain and --apple-load-keychain flags used the syntax -K and -A, respectively.
+>> If you don't have Apple's standard version of ssh-add installed, you may receive an error. For more information, see "Error: ssh-add: illegal option -- K."
 
 - Generate GPG key
 
@@ -112,13 +122,22 @@ brew install tmux
 brew install gcc
 ```
 
-## Final check
+## **Step 6: Final check**
+
+- (Optional) If you want to contribute to this project, you can clone it using SSH
 
 ```bash
+ROOT_DIR=~/dev_projects
+git clone git@github.com:Chindada/macos_dev_setup.git $ROOT_DIR/macos_dev_setup
+```
+
+```bash
+brew --version
 git config --list
 go version
 flutter --version
 node --version
+python3 --version
 ```
 
 ## Author

@@ -49,3 +49,11 @@ fi
 brew install git
 git config --global user.name "Tim Hsu@M2MAX-$(date '+%Y%m%d')"
 git config --global user.email "maochindada@gmail.com"
+
+new_rc='ulimit -n 1024'
+if grep -q $new_rc ~/.zshrc; then
+    echo "$new_rc already exists"
+else
+    echo "$new_rc does not exist, adding it to ~/.zshrc"
+    gsed -i "$ a $new_rc" ~/.zshrc
+fi
