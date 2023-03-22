@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## [v1.2.0](https://github.com/Chindada/macos_dev_setup/compare/v1.1.2...v1.2.0)
+
+> 2023-03-22
+
+### Features (1)
+
+* **clean:** add clean up in the last of install, move output to upper folder
+
 ## [v1.1.2](https://github.com/Chindada/macos_dev_setup/compare/v1.1.1...v1.1.2)
 
 > 2023-03-22
