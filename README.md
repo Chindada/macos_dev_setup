@@ -51,6 +51,7 @@ sudo softwareupdate --install-rosetta --agree-to-license
 
 ## **Step 3: (Optional) CalDigit Thunderbolt Station Driver(TS3 Plus)**
 
+- If you don't have CalDigit Thunderbolt Station, you can skip this step
 - Reduce secruity policy in recovery os [Reference](https://support.apple.com/guide/deployment/startup-security-dep5810e849c/web)
 - [Downdload](https://downloads.caldigit.com/CalDigit-Thunderbolt-Station-Mac-Drivers.zip) and manual install driver
 
