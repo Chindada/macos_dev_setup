@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## [v1.1.2](https://github.com/Chindada/macos_dev_setup/compare/v1.1.1...v1.1.2)
+
+> 2023-03-22
+
+### Bug Fixes (1)
+
+* **ohmyzsh:** fix in a new envrionment will not install
+
 ## [v1.1.1](https://github.com/Chindada/macos_dev_setup/compare/v1.1.0...v1.1.1)
 
 > 2023-03-22
