@@ -6,7 +6,15 @@ brew install gnutls
 brew install coreutils
 brew install clang-format
 brew install mosquitto
-brew install postgresql
+
+brew install postgresql@15
+new_rc='export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"'
+if grep -q $new_rc ~/.zshrc; then
+  echo "$new_rc already exists"
+else
+  echo "$new_rc does not exist, adding it to ~/.zshrc"
+  gsed -i "$ a $new_rc" ~/.zshrc
+fi
 
 brew install --cask valentina-studio
 brew install --cask visual-studio-code

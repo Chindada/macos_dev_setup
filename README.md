@@ -1,6 +1,7 @@
 # MACOS DEVELOPER SETUP
 
 [![MAINTAINED](https://img.shields.io/badge/Maintained-yes-green?style=for-the-badge&logo=appveyor)](https://github.com/Chindada/macos_dev_setup)
+[![RELEASE](https://img.shields.io/github/release/Chindada/macos_dev_setup?style=for-the-badge)](https://github.com/Chindada/macos_dev_setup/releases/latest)
 [![OS](https://img.shields.io/badge/macOS-13.2.1-orange?style=for-the-badge&logo=macOS&logoColor=violet)](https://www.apple.com/tw/macos)
 [![ARCH](https://img.shields.io/badge/Arch-arm64-silver?style=for-the-badge&logo=arm&logoColor=blue)](https://www.apple.com/tw/macos)
 
@@ -36,10 +37,6 @@
 
 ```bash
 sudo xcode-select --install
-```
-
-```bash
-sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
 ```
 
 ---
@@ -85,36 +82,52 @@ cd $ROOT_DIR/macos_dev_setup
 
 ---
 
-## **Step 5: Post install**
+## **Step 5: Post Install**
 
-- Launch iterm2
-- It will prompt to initial powerlevel10k
-- Paste `yyyy3121111121y1yy` to terminal
-- The iterm2 will be like below
+### **zsh**
+
+- Launch iterm2, it will prompt to initial powerlevel10k
+- Paste `yyyy3121111121y1yy`
+  - The zsh will be like below
 
 ![ITERM2](./assets/s005.png)
 
-- Xcode license and run first launch
+### **Xcode**
+
+- Run below commands
+- **Then, manual launch Xcode, let it finish the first launch**
 
 ```bash
 sudo xcodebuild -license
 ```
 
 ```bash
+sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
+```
+
+```bash
 sudo xcodebuild -runFirstLaunch
 ```
 
-- Flutter doctor
+### **Android Studio**
+
+- **Manual launch Android Studio, install Android SDK**, then run below command
 
 ```bash
 flutter doctor --android-licenses
 ```
 
+### **SSH**
+
 - Generate SSH key or import SSH key
-- If new, add SSH key to github
+  - If import, permission should be 600 `chmod 600 ~/.ssh/id_ed25519`
+  - If new, add SSH key to github
 
 ```bash
 ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519 -q -N "" -C "maochindada@gmail.com"
+```
+
+```bash
 eval "$(ssh-agent -s)"
 
 touch ~/.ssh/config
@@ -131,6 +144,8 @@ cat ~/.ssh/id_ed25519.pub
 > Note: The --apple-use-keychain option stores the passphrase in your keychain for you when you add an SSH key to the ssh-agent. If you chose not to add a passphrase to your key, run the command without the --apple-use-keychain option.
 >> The --apple-use-keychain option is in Apple's standard version of ssh-add. In MacOS versions prior to Monterey (12.0), the --apple-use-keychain and --apple-load-keychain flags used the syntax -K and -A, respectively.
 >> If you don't have Apple's standard version of ssh-add installed, you may receive an error. For more information, see "Error: ssh-add: illegal option -- K."
+
+### **GPG Key**
 
 - Generate GPG key, then add export to github
 - There should not be any key in the list
@@ -155,15 +170,6 @@ git config --global tag.gpgSign true
 
 ```bash
 echo "test" | gpg --clearsign
-```
-
-- Optional brew formula
-
-```bash
-brew install pre-commit
-brew install cmake
-brew install tmux
-brew install gcc
 ```
 
 ## **Step 6: Final check**

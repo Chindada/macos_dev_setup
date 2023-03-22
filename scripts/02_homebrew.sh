@@ -61,7 +61,13 @@ fi
 brew install gnupg
 brew install pinentry-mac
 
-gpg --version
+if [ ! -d ~/.gnupg ]; then
+  echo "Creating ~/.gnupg"
+  mkdir ~/.gnupg
+else
+  echo "~/.gnupg already exists"
+fi
+
 echo "pinentry-program $(brew --prefix)/bin/pinentry-mac" >~/.gnupg/gpg-agent.conf
 new_rc='export GPG_TTY=$(tty)'
 if grep -q $new_rc ~/.zshrc; then
