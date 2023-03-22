@@ -12,3 +12,7 @@ set -e
 . ./scripts/08_powerlevel10k.sh
 . ./scripts/09_fonts.sh
 . ./scripts/10_mas_apps.sh
+
+echo "Cleaning up..."
+cd ..
+rm -rf macos_dev_setup

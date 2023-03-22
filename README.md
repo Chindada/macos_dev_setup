@@ -77,16 +77,10 @@ mv $ROOT_DIR/macos_dev_setup-$VERSION $ROOT_DIR/macos_dev_setup
 cd $ROOT_DIR/macos_dev_setup
 ```
 
-- Install and the output will be saved to `output_$(date +%Y%m%d%H%M).txt`
+- Install and the output will be saved to `$ROOT_DIR/macos_dev_setup_output_$(date +%Y%m%d%H%M).txt`
 
 ```bash
-./install.sh 2>&1 | tee output_$(date +%Y%m%d%H%M).txt
-```
-
-- if there is no error in the output, you can remove the folder
-
-```bash
-rm -rf $ROOT_DIR/macos_dev_setup
+./install.sh 2>&1 | tee $ROOT_DIR/macos_dev_setup_output_$(date +%Y%m%d%H%M).txt
 ```
 
 ---
@@ -104,6 +98,9 @@ rm -rf $ROOT_DIR/macos_dev_setup
 
 ```bash
 sudo xcodebuild -license
+```
+
+```bash
 sudo xcodebuild -runFirstLaunch
 ```
 
@@ -180,11 +177,11 @@ git clone git@github.com:Chindada/macos_dev_setup.git $ROOT_DIR/macos_dev_setup
 
 ```bash
 brew --version
-git config --list
 go version
 flutter --version
 node --version
 python3 --version
+git config --list
 ```
 
 ## Author
