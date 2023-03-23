@@ -1,5 +1,17 @@
 # CHANGELOG
 
+## [v1.3.1](https://github.com/Chindada/macos_dev_setup/compare/v1.3.0...v1.3.1)
+
+> 2023-03-23
+
+### Bug Fixes (1)
+
+* **readme:** fix wrong spelling, remove bold style in xcode part
+
+### Features (1)
+
+* **flutter:** update flutter to v3.7.8
+
 ## [v1.3.0](https://github.com/Chindada/macos_dev_setup/compare/v1.2.0...v1.3.0)
 
 > 2023-03-23
