@@ -35,7 +35,7 @@
 
 ## **(Optional) CalDigit Thunderbolt Station Driver(TS3 Plus)**
 
-- Skip this step, iff you don't have CalDigit Thunderbolt Station
+- Skip this step, if you don't have CalDigit Thunderbolt Station
   1. Reduce secruity policy in recovery os [Reference](https://support.apple.com/guide/deployment/startup-security-dep5810e849c/web)
   2. [Downdload](https://downloads.caldigit.com/CalDigit-Thunderbolt-Station-Mac-Drivers.zip) and manual install driver
 
@@ -111,7 +111,7 @@
     sudo xcodebuild -runFirstLaunch
     ```
 
-2. **Manual launch Xcode, let it finish the first initial**
+2. Manual launch Xcode, let it finish the first initial
 
 ### **Android Studio**
 
