@@ -25,7 +25,7 @@ new_rc='export GOPATH="$HOME/go"'
 if grep -q $new_rc ~/.zshrc; then
   echo "$new_rc already exists"
 else
-  echo "$new_rc does not exist, adding it to ~/.zshrc"
+  echo "adding $new_rc to ~/.zshrc"
   gsed -i "$ a $new_rc" ~/.zshrc
 fi
 
@@ -33,7 +33,7 @@ new_rc='export PATH="$GOPATH/bin:$PATH"'
 if grep -q $new_rc ~/.zshrc; then
   echo "$new_rc already exists"
 else
-  echo "$new_rc does not exist, adding it to ~/.zshrc"
+  echo "adding $new_rc to ~/.zshrc"
   gsed -i "$ a $new_rc" ~/.zshrc
 fi
 
@@ -61,6 +61,6 @@ new_rc='export PATH="$HOME/sdk_tools/protoc/bin:$PATH"'
 if grep -q $new_rc ~/.zshrc; then
   echo "$new_rc already exists"
 else
-  echo "$new_rc does not exist, adding it to ~/.zshrc"
+  echo "adding $new_rc to ~/.zshrc"
   gsed -i "$ a $new_rc" ~/.zshrc
 fi

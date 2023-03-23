@@ -18,6 +18,6 @@ new_rc='source ~/.apple_silicon_python'
 if grep -q $new_rc ~/.zshrc; then
   echo "$new_rc already exists"
 else
-  echo "$new_rc does not exist, adding it to ~/.zshrc"
+  echo "adding $new_rc to ~/.zshrc"
   gsed -i "$ a $new_rc" ~/.zshrc
 fi

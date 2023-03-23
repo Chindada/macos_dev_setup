@@ -24,7 +24,7 @@ new_rc='ZSH_DISABLE_COMPFIX="true"'
 if grep -q $new_rc ~/.zshrc; then
   echo "$new_rc already exists"
 else
-  echo "$new_rc does not exist, adding it to ~/.zshrc"
+  echo "adding $new_rc to ~/.zshrc"
   gsed -i "1 i $new_rc" ~/.zshrc
 fi
 
@@ -33,7 +33,7 @@ new_rc='source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh'
 if grep -q $new_rc ~/.zshrc; then
   echo "$new_rc already exists"
 else
-  echo "$new_rc does not exist, adding it to ~/.zshrc"
+  echo "adding $new_rc to ~/.zshrc"
   gsed -i "$ a $new_rc" ~/.zshrc
 fi
 
@@ -42,7 +42,7 @@ new_rc='source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighti
 if grep -q $new_rc ~/.zshrc; then
   echo "$new_rc already exists"
 else
-  echo "$new_rc does not exist, adding it to ~/.zshrc"
+  echo "adding $new_rc to ~/.zshrc"
   gsed -i "$ a $new_rc" ~/.zshrc
 fi
 
@@ -54,7 +54,7 @@ new_rc='ulimit -n 1024'
 if grep -q $new_rc ~/.zshrc; then
   echo "$new_rc already exists"
 else
-  echo "$new_rc does not exist, adding it to ~/.zshrc"
+  echo "adding $new_rc to ~/.zshrc"
   gsed -i "$ a $new_rc" ~/.zshrc
 fi
 
@@ -73,6 +73,6 @@ new_rc='export GPG_TTY=$(tty)'
 if grep -q $new_rc ~/.zshrc; then
   echo "$new_rc already exists"
 else
-  echo "$new_rc does not exist, adding it to ~/.zshrc"
+  echo "adding $new_rc to ~/.zshrc"
   gsed -i "$ a $new_rc" ~/.zshrc
 fi

@@ -12,7 +12,7 @@ new_rc='export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"'
 if grep -q $new_rc ~/.zshrc; then
   echo "$new_rc already exists"
 else
-  echo "$new_rc does not exist, adding it to ~/.zshrc"
+  echo "adding $new_rc to ~/.zshrc"
   gsed -i "$ a $new_rc" ~/.zshrc
 fi
 
