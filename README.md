@@ -35,7 +35,7 @@
     `-- 10_mas_apps.sh        # Install mas apps
 ```
 
-## **(Optional) CalDigit Thunderbolt Station Driver(TS3 Plus)**
+## **Step 0: (Optional) CalDigit Thunderbolt Station Driver(TS3 Plus)**
 
 - Skip this step, if you don't have CalDigit Thunderbolt Station
   1. Reduce secruity policy in recovery os [Reference](https://support.apple.com/guide/deployment/startup-security-dep5810e849c/web)
@@ -50,6 +50,9 @@
   ```bash
   sudo xcode-select --install
   ```
+
+- If you have install CalDigit Thunderbolt Station Driver(TS3 Plus), skip this step
+- The installer should has installed Rosetta2, if not, run below command
 
   ```bash
   sudo softwareupdate --install-rosetta --agree-to-license
@@ -117,10 +120,18 @@
 
 ### **Android Studio**
 
-- **Manual launch Android Studio, install Android SDK**, then run below command
+- **Manual launch Android Studio, install Android SDK**
+  - Install Android SDK Command-line Tools
+  - Install plugin flutter & dart
+
+  ![Android SDK](./assets/s007.png)
 
   ```bash
   flutter doctor --android-licenses
+  ```
+
+  ```bash
+  flutter doctor
   ```
 
 ### **SSH**
