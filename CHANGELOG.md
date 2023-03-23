@@ -1,5 +1,18 @@
 # CHANGELOG
 
+## [v1.4.0](https://github.com/Chindada/macos_dev_setup/compare/v1.3.1...v1.4.0)
+
+> 2023-03-24
+
+### Bug Fixes (1)
+
+* **flutter:** fix wrong pub cache bin path
+
+### Features (2)
+
+* **caution:** add caution to announce this project only works on apple silicon arch
+* **configs:** add iterm theme to configs, improve readme
+
 ## [v1.3.1](https://github.com/Chindada/macos_dev_setup/compare/v1.3.0...v1.3.1)
 
 > 2023-03-23

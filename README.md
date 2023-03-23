@@ -65,7 +65,7 @@
 - In this case, base folder is `~/dev_projects`, you can change it to your own folder
 
   ```bash
-  VERSION=1.3.1
+  VERSION=1.4.0
   BASE_DIR=~/dev_projects
   ```
 
