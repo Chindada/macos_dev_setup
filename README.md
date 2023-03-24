@@ -7,7 +7,7 @@
 
 ## **Caution: This script is only for Apple silicon architecture mac**
 
-![13.2.1](./assets/s004.png)
+![13.2.1](./assets/s008.png)
 
 ## **Project Structure**
 
