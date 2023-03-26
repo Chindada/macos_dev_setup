@@ -50,8 +50,8 @@ brew install git-chglog
 - new tag
 
 ```sh
-COMMIT_HASH=6a22090
-VERSION=1.4.0
+COMMIT_HASH=96ac6d2
+VERSION=1.5.0
 git tag -a v$VERSION $COMMIT_HASH -m $VERSION
 git push -u origin --all
 git push -u origin --tags

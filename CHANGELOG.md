@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## [v1.5.0](https://github.com/Chindada/macos_dev_setup/compare/v1.4.0...v1.5.0)
+
+> 2023-03-27
+
+### Features (2)
+
+* **image:** update os image to m2 max
+* **install:** remove install meslo font, add rosetta install
+
 ## [v1.4.0](https://github.com/Chindada/macos_dev_setup/compare/v1.3.1...v1.4.0)
 
 > 2023-03-24
