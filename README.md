@@ -51,13 +51,6 @@
   sudo xcode-select --install
   ```
 
-- If you have install CalDigit Thunderbolt Station Driver(TS3 Plus), skip this step
-- The installer should has installed Rosetta2, if not, run below command
-
-  ```bash
-  sudo softwareupdate --install-rosetta --agree-to-license
-  ```
-
 ---
 
 ## **Step 2: Directly Download**
@@ -94,7 +87,8 @@
 
 ### **zsh**
 
-1. Launch iterm2, it will prompt to initial powerlevel10k
+1. Launch iterm2, it will prompt to install MesloLGS font and initial powerlevel10k
+    - if no install font, exit and restart until iterm2 prompt to install font
 2. Paste `yyyy3121111121y1yy`
     - The zsh will be like below
 

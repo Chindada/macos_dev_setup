@@ -20,15 +20,6 @@ fi
 echo "Installing $fonts..."
 cp ./fonts/JetBrainsMono/$fonts*.ttf $HOME/Library/Fonts/
 
-fonts=MesloLGS
-files=(/Library/Fonts/$fonts*.ttf)
-if ((${#files[@]})); then
-  echo "Removing old $fonts..."
-  rm -rf /Library/Fonts/$fonts*.ttf
-fi
-echo "Installing $fonts..."
-cp ./fonts/MesloLGS/$fonts*.ttf $HOME/Library/Fonts/
-
 fonts=Monoid
 files=(/Library/Fonts/$fonts*.ttf)
 if ((${#files[@]})); then
