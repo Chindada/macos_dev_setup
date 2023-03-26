@@ -43,7 +43,7 @@
 
 ---
 
-## **Step 1: Install Xcode CLI tools and Rosetta2**
+## **Step 1: Install Xcode CLI tools**
 
 - Execute below commands, step by step
 
