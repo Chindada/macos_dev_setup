@@ -19,6 +19,7 @@ brew install gnu-sed
 
 # replace plugins
 gsed -i "/^plugins=(git/c plugins=(git colored-man-pages brew macos)" ~/.zshrc
+gsed -i 's/# export LANG=en_US.UTF-8/export LANG=en_US.UTF-8/' ~/.zshrc
 
 new_rc='ZSH_DISABLE_COMPFIX="true"'
 if grep -q $new_rc ~/.zshrc; then

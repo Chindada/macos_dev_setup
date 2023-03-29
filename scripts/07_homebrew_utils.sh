@@ -1,6 +1,15 @@
 #!/bin/zsh
 
 echo "Installing homebrew utils..."
+brew install make
+new_rc='export PATH="$HOMEBREW_PREFIX/opt/make/libexec/gnubin:$PATH"'
+if grep -q $new_rc ~/.zshrc; then
+  echo "$new_rc already exists"
+else
+  echo "adding $new_rc to ~/.zshrc"
+  gsed -i "$ a $new_rc" ~/.zshrc
+fi
+
 brew install tree
 brew install gnutls
 brew install coreutils
