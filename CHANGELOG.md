@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## [v1.5.1](https://github.com/Chindada/macos_dev_setup/compare/v1.5.0...v1.5.1)
+
+> 2023-03-29
+
+### Bug Fixes (2)
+
+* **python:** remove specific python version, add lang setup, add gnu make
+* **readme:** remove redundant rosetta2 word
+
 ## [v1.5.0](https://github.com/Chindada/macos_dev_setup/compare/v1.4.0...v1.5.0)
 
 > 2023-03-27
