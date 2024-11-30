@@ -1,42 +1,11 @@
 #!/bin/zsh
 
-echo "Installing Xcode..."
-sudo sh -c 'xcode-select -s /Applications/Xcode.app/Contents/Developer && xcodebuild -runFirstLaunch'
-sudo xcodebuild -license
-
 echo "Removing old flutter..."
 rm -rf ~/sdk_tools/flutter
 rm -rf $HOME/.pub-cache
 rm -rf $HOME/.dartServer
 
 echo "Installing flutter..."
-version=2.10.0
-version=2.10.4
-version=3.0.0
-version=3.3.9
-version=3.7.7
-version=3.7.8
-version=3.7.9
-version=3.13.0
-version=3.13.3
-version=3.13.4
-version=3.13.5
-version=3.13.6
-version=3.13.9
-version=3.16.0
-version=3.16.2
-version=3.16.3
-version=3.16.5
-version=3.16.6
-version=3.16.7
-version=3.16.8
-version=3.19.2
-version=3.19.5
-version=3.22.0
-version=3.22.1
-version=3.22.3
-version=3.24.3
-version=3.24.4
 version=3.24.5
 echo "Downloading flutter $version..."
 # check flutter.zip exists
@@ -81,8 +50,14 @@ $HOME/sdk_tools/flutter/flutter/bin/dart pub global activate devtools
 # https://rubygems.org/gems/activesupport
 
 echo "Installing cocoapods..."
-sudo gem install cocoapods -n /usr/local/bin
-sudo gem install activesupport
+sudo gem install cocoapods
+new_rc='export PATH=$HOME/.gem/bin:$PATH'
+if grep -q $new_rc ~/.zshrc; then
+  echo "$new_rc already exists"
+else
+  echo "adding $new_rc to ~/.zshrc"
+  gsed -i "$ a $new_rc" ~/.zshrc
+fi
 
 echo "y" | $HOME/sdk_tools/flutter/flutter/bin/dart pub cache clean
 $HOME/sdk_tools/flutter/flutter/bin/flutter config --no-analytics

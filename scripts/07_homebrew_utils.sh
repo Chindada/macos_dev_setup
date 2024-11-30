@@ -31,7 +31,6 @@ brew install --cask iterm2
 brew install --cask docker
 brew install --cask postman
 brew install --cask google-chrome
-brew install --cask microsoft-edge
 brew install --cask github
 brew install --cask figma
 brew install --cask vlc
@@ -43,9 +42,4 @@ brew install --cask one-switch
 
 brew install --cask microsoft-teams
 brew install --cask slack
-brew install --cask discord
-brew install --cask zoom
-brew install --cask webex
 brew install --cask telegram
-
-brew install --cask powershell

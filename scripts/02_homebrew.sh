@@ -58,17 +58,17 @@ else
 fi
 
 brew install git
-git config --global user.name "Tim Hsu@M2MAX-$(date '+%Y%m%d')"
+git config --global user.name "Tim Hsu@M4MAX-$(date '+%Y%m%d')"
 git config --global user.email "maochindada@gmail.com"
 git config --global pull.rebase true
 
-new_rc='ulimit -n 1024'
-if grep -q $new_rc ~/.zshrc; then
-  echo "$new_rc already exists"
-else
-  echo "adding $new_rc to ~/.zshrc"
-  gsed -i "$ a $new_rc" ~/.zshrc
-fi
+# new_rc='ulimit -n 1024'
+# if grep -q $new_rc ~/.zshrc; then
+#   echo "$new_rc already exists"
+# else
+#   echo "adding $new_rc to ~/.zshrc"
+#   gsed -i "$ a $new_rc" ~/.zshrc
+# fi
 
 brew install gnupg
 brew install pinentry-mac
