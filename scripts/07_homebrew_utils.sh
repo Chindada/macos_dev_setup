@@ -16,8 +16,8 @@ brew install coreutils
 brew install clang-format
 brew install mosquitto
 
-brew install postgresql@15
-new_rc='export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"'
+brew install postgresql@16
+new_rc='export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"'
 if grep -q $new_rc ~/.zshrc; then
   echo "$new_rc already exists"
 else

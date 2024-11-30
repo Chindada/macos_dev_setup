@@ -14,6 +14,16 @@ fi
 # use arm64 version to continue
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+# Install brew packages
+echo "Installing ruby..."
+brew install ruby
+
+echo 'if [ -d "$(brew --prefix)/opt/ruby/bin" ]; then
+  export PATH=$(brew --prefix)/opt/ruby/bin:$PATH
+  export PATH=$(gem environment gemdir)/bin:$PATH
+fi
+' >>~/.zprofile
+
 # install gsed
 brew install gnu-sed
 
@@ -50,6 +60,7 @@ fi
 brew install git
 git config --global user.name "Tim Hsu@M2MAX-$(date '+%Y%m%d')"
 git config --global user.email "maochindada@gmail.com"
+git config --global pull.rebase true
 
 new_rc='ulimit -n 1024'
 if grep -q $new_rc ~/.zshrc; then

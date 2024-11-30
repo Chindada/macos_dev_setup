@@ -1,3 +1,4 @@
 output*.txt
 macos*.txt
 *.zip
+.DS_Store
