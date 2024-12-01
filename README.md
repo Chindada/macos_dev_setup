@@ -43,19 +43,7 @@
 
 ---
 
-## **Step 1: Install Rosetta 2 and Xcode**
-
-- Execute below commands, step by step
-
-  ```bash
-  sudo softwareupdate --install-rosetta --agree-to-license
-  sudo sh -c 'xcode-select -s /Applications/Xcode.app/Contents/Developer && xcodebuild -runFirstLaunch'
-  sudo xcodebuild -license
-  ```
-
----
-
-## **Step 2: Directly Download**
+## **Step 1: Directly Download**
 
 - In this case, base folder is `~/dev_projects`, you can change it to your own folder
 
@@ -73,7 +61,7 @@
   cd $BASE_DIR/macos_dev_setup
   ```
 
-## **Step 3: Install**
+## **Step 2: Install**
 
 - Install and the output will be saved to `$BASE_DIR/macos_dev_setup_output_$(date +%Y%m%d%H%M).txt`
 
@@ -85,7 +73,14 @@
 
 ---
 
-## **Step 4: Post Install**
+## **Step 3: Post Install**
+
+### **Xcode**
+
+```sh
+sudo sh -c 'xcode-select -s /Applications/Xcode.app/Contents/Developer && xcodebuild -runFirstLaunch'
+sudo xcodebuild -license
+```
 
 ### **zsh**
 
@@ -186,7 +181,7 @@ gpg --full-generate-key
   echo "test" | gpg --clearsign
   ```
 
-## **Step 5: Final check**
+## **Step 4: Final check**
 
 - (Optional) If you want to contribute to this project, you can clone it using SSH
 
