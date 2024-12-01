@@ -4,6 +4,8 @@ echo "Installing mas..."
 brew install mas
 
 echo "Installing mas apps..."
+# Xcode
+mas install 497799835 &
 
 # Apple Configurator 2
 mas install 1037126344 &
