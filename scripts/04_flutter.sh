@@ -39,6 +39,7 @@ else
   echo "adding $new_rc to ~/.zshrc"
   gsed -i "$ a $new_rc" ~/.zshrc
 fi
+$HOME/sdk_tools/flutter/flutter/bin/dart --disable-analytics
 
 # activesupport version depends on ruby version
 # ruby --version

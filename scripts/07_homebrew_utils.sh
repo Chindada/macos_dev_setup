@@ -25,12 +25,22 @@ else
   gsed -i "$ a $new_rc" ~/.zshrc
 fi
 
+brew install eza
+new_rc='alias ls="eza --color=always --long --git --icons=always"'
+if grep -q $new_rc ~/.zshrc; then
+  echo "$new_rc already exists"
+else
+  echo "adding $new_rc to ~/.zshrc"
+  gsed -i "$ a $new_rc" ~/.zshrc
+fi
+
 brew install --cask valentina-studio
 brew install --cask visual-studio-code
 brew install --cask iterm2
 brew install --cask docker
 brew install --cask postman
 brew install --cask google-chrome
+brew install --cask arc
 brew install --cask github
 brew install --cask figma
 brew install --cask vlc

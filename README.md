@@ -2,12 +2,12 @@
 
 [![MAINTAINED](https://img.shields.io/badge/Maintained-yes-green?style=for-the-badge&logo=appveyor)](https://github.com/Chindada/macos_dev_setup)
 [![RELEASE](https://img.shields.io/github/release/Chindada/macos_dev_setup?style=for-the-badge)](https://github.com/Chindada/macos_dev_setup/releases/latest)
-[![OS](https://img.shields.io/badge/macOS-13.2.1-orange?style=for-the-badge&logo=macOS&logoColor=violet)](https://www.apple.com/tw/macos)
+[![OS](https://img.shields.io/badge/macOS-15.1.1-orange?style=for-the-badge&logo=macOS&logoColor=violet)](https://www.apple.com/tw/macos)
 [![ARCH](https://img.shields.io/badge/Arch-arm64-silver?style=for-the-badge&logo=arm&logoColor=blue)](https://www.apple.com/tw/macos)
 
 ## **Caution: This script is only for Apple silicon architecture mac**
 
-![13.2.1](./assets/s008.png)
+![15.1.1](./assets/s009.png)
 
 ## **Project Structure**
 
@@ -58,7 +58,7 @@
 - In this case, base folder is `~/dev_projects`, you can change it to your own folder
 
   ```bash
-  VERSION=1.5.1
+  VERSION=2.0.0
   BASE_DIR=~/dev_projects
   ```
 
@@ -85,13 +85,6 @@
 
 ## **Step 4: Post Install**
 
-### **Xcode**
-
-```sh
-sudo sh -c 'xcode-select -s /Applications/Xcode.app/Contents/Developer && xcodebuild -runFirstLaunch'
-sudo xcodebuild -license
-```
-
 ### **zsh**
 
 1. Launch iterm2, it will prompt to install MesloLGS font and initial powerlevel10k
@@ -106,15 +99,11 @@ sudo xcodebuild -license
 1. Run below commands
 
     ```bash
+    sudo sh -c 'xcode-select -s /Applications/Xcode.app/Contents/Developer && xcodebuild -runFirstLaunch'
+    ```
+
+    ```bash
     sudo xcodebuild -license
-    ```
-
-    ```bash
-    sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
-    ```
-
-    ```bash
-    sudo xcodebuild -runFirstLaunch
     ```
 
 2. Manual launch Xcode, let it finish the first initial
@@ -139,10 +128,15 @@ sudo xcodebuild -license
 
 - Generate SSH key or import SSH key
   - If import, permission should be 600 `chmod 600 ~/.ssh/id_ed25519`
+
+  ```bash
+  ssh-keygen -f ~/.ssh/id_ed25519 -c -C "NEW COMMENT"
+  ```
+
   - If new, add SSH key to github
 
   ```bash
-  ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519 -q -N "" -C "maochindada@gmail.com"
+  ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519 -q -N "" -C "maochindada@M4MAX"
   ```
 
   ```bash
@@ -155,6 +149,7 @@ sudo xcodebuild -license
     IdentityFile ~/.ssh/id_ed25519
     StrictHostKeyChecking no' >~/.ssh/config
 
+  ssh-add -D
   ssh-add --apple-use-keychain ~/.ssh/id_ed25519
   cat ~/.ssh/id_ed25519.pub
   ```
