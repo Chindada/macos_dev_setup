@@ -13,7 +13,6 @@ if [ -f "flutter_macos_arm64_$version-stable.zip" ]; then
   echo "flutter_macos_arm64_$version-stable.zip exists"
 else
   echo "flutter_macos_arm64_$version-stable.zip does not exist"
-  rm -rf flutter_macos_arm64_*.zip
   curl -fSL https://storage.googleapis.com/flutter_infra_release/releases/stable/macos/flutter_macos_arm64_$version-stable.zip --output flutter_macos_arm64_$version-stable.zip
 fi
 
